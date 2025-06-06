@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>test</title>
+
+<style>
+	button {
+      padding: 10px 20px;
+      cursor: pointer;
+      
+      
+      .active{
+    	display: block
+      
+    }
+      .screen{
+    	display: none
+    }
+
+</style>
+
+</head>
+
+<!-- --------------------------------------- -->
+<!-- start screen -->
+<body>
+
+<div id="start-screen" class = "screen active">
+
+<div>
+
+<h1>Теоретичесткий тест по вождению</h1>
+<h3>Добро пожаловать!</h3>
+
+</div>
+
+<div>
+
+<p>После того как вы нажмете снизу на кнопку <span style = "font-weight: bold; color: green"> Начать тест! </span> начнется тест начнется счетчик таймера <span style = "font-weight:bold; color: red"> (15 минут)</span>, вам предоставиться картинка с вопросом и четыре варианта ответа. </p>
+
+<p>Выберите правильный ответ и нажмите <span style = "color:green; font-weight: bold">"Продолжить"</span></p>
+
+</div>
+
+<div>
+
+<p></p>
+
+<button onclick="startTest()" style = "background-color: lime; border: 1px; color: black; font-weight: bold" > Начать тест!</button>
+
+</div>
+
+</div>
+
+<!-- ----------------------------- -->
+<!-- question screen -->
+
+<div id="question-screen" class="sreen">
+<h2 id = "numberQuestion"></h2>
+<p id = "textQuestion"></p>
+<img id = "imageQuestion">
+<div id="optionsQuestion"> </div>
+<button style = "background-color: lime; border: 1px; color: black; font-weight: bold" id = "buttonQuestion" onclick="nextQuestion()"> </button>
+
+</div>
+
+<!-- ------------------------------------- -->
+<!-- javascript -->
+<script>
+
+  current = 0;
+  
+  
+  let question[
+  {
+  numberQuestion: "Первый вопрос!",
+  textQuestion: "tut vopros voznik",
+  imageQuestion: "",
+  optionsQuestion: ["v zopu raz", "vilkoj v glaz", "qq", "qq"],
+  buttonQuestion: "Продолжить"
+  }
+
+  {
+  numberQuestion: "Второй вопрос!",
+  textQuestion: "sosal?",
+  imageQuestion: "",
+  optionsQuestion: ["da, u menja BMW", "da, no u menja ne BMW", "da, no u menja net mashini((", "net"],
+  buttonQuestion: "Продолжить"
+  }
+ 
+ 
+  {
+  numberQuestion: "Третий вопрос!",
+  textQuestion: "",
+  imageQuestion: "",
+  optionsQuestion: ["", "", "", ""],
+  buttonQuestion: "Продолжить"
+  }
+ 
+ 
+  {
+  numberQuestion: "Четвертый вопрос!",
+  textQuestion: "",
+  imageQuestion: "",
+  optionsQuestion: ["", "", "", ""],
+  buttonQuestion: "Продолжить"
+  }
+  
+  
+  {
+  numberQuestion: "Пятый вопрос!",
+  textQuestion: "",
+  imageQuestion: "",
+  optionsQuestion: ["", "", "", ""],
+  buttonQuestion: "Продолжить"
+  }
+  
+  
+  {
+  numberQuestion: "Шестой вопрос!",
+  textQuestion: "",
+  imageQuestion: "",
+  optionsQuestion: ["", "", "", ""],
+  buttonQuestion: "Продолжить"
+  }
+  
+  
+  {
+  numberQuestion: "Седьмой вопрос!",
+  textQuestion: "",
+  imageQuestion: "",
+  optionsQuestion: ["", "", "", ""],
+  buttonQuestion: "Продолжить"
+  }
+  
+  
+  {
+  numberQuestion: "Восьмой вопрос!",
+  textQuestion: "",
+  imageQuestion: "",
+  optionsQuestion: ["", "", "", ""],
+  buttonQuestion: "Продолжить"
+  }
+  
+  
+  {
+  numberQuestion: "Девятый вопрос!",
+  textQuestion: "",
+  imageQuestion: "",
+  optionsQuestion: ["", "", "", ""],
+  buttonQuestion: "Продолжить"
+  }
+  
+  
+  {
+  numberQuestion: "Последний вопрос!",
+  textQuestion: "",
+  imageQuestion: "",
+  optionsQuestion: ["", "", "", ""],
+  buttonQuestion: "Продолжить"
+  }
+  
+  
+  ]
+  
+  
+  current = 0;
+  
+  function nextQuestion() {
+    current += 1 
+  }
+  
+  function showQuestion(){
+  let q = question[current]
+  
+  document.getElementById("")
+  document.getElementById("")
+  document.getElementById("")
+  
+  }
+  
+  
+  function startTest() {
+    document.getElementById("start-screen").classList.remove("active");
+    document.getElementById("question-screen").classList.add("active");
+    showQuestion()
+  }
+  
+  document.getElementById("textQuestion").innerText = q.textQuestion 
+  document.getElementById("question-text").innerText = questions[current].text;
+  document.getElementById("question-image").src = questions[current].image;
+  
+  
+</script>
+
+</body>
+</html>
